@@ -90,7 +90,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                 </div>
             </div>
 
-            <div className="relative w-full flex justify-center mt-auto">
+            <div className="relative w-full flex justify-center mt-35">
   <div className="relative">
     {/* Arc border container */}
     <div className="w-[1000px] h-[200px] relative overflow-hidden"> {/* Reduced height */}

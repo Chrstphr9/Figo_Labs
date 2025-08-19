@@ -20,7 +20,7 @@ const FeatureCard = ({ icon, title, description }) => {
           {title}
         </h3>
       </div>
-      <p className="text-gray-400 text-sm leading-relaxed flex-1 text-center font-sf">
+      <p className="text-gray-400 text-sm leading-relaxed flex-1 text-center font-poppins">
         {description}
       </p>
     </div>
@@ -59,7 +59,7 @@ const FeaturesSection = () => {
           <h2 className="text-4xl sm:text-5xl lg:text-[40px] mb-4 font-semibold font-poppins">
             Powerful Features
           </h2>
-          <p className="gradient-text text-lg sm:text-xl font-semibold mb-4 lg:text-[40px] font-sf">
+          <p className="gradient-text text-lg sm:text-xl font-semibold mb-4 lg:text-[40px] font-poppins">
             for Modern Teams
           </p>
           <p className="text-[#ffffffb3] text-base sm:text-lg max-w-3xl mx-auto leading-relaxed lg:font-normal font-poppins">
@@ -69,7 +69,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto font-poppins">
           {features.map((feature, index) => (
             <div key={index} className="flex justify-center">
               <FeatureCard

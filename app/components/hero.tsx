@@ -35,12 +35,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   inline-flex 
   items-center 
   mb-8 
-  px-2 
-  py-1 
+  px-4 
+  py-2 
   rounded-full 
   border 
-  border-gray-700 
-  bg-gray-800/50 
+  border-[#FFFFFF66]
+  bg-gradient-to-br from-[#E9E2FF66] to-[#F6F0FF4D]
   backdrop-blur-sm
   opacity-30
   space-x-2
@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
     font-medium 
     text-gray-300 
     text-xs
-    font-space-grotesk
+    font-poppins
   ">
                         By Figo Labs
                     </span>
@@ -106,30 +106,30 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
           
           {/* 99.9% Uptime Guarantee */}
           <div className="text-center flex-1">
-            <div className="text-4xl font-bold bg-[#BF38F575] bg-clip-text text-transparent mb-2 leading-none">
+            <div className="text-4xl font-bold bg-[#BF38F575] bg-clip-text text-transparent mb-2 leading-none font-poppins">
               99.9%
             </div>
-            <div className="text-gray-300 text-sm font-medium leading-tight">
+            <div className="text-gray-300 text-sm font-medium leading-tight font-poppins">
               Uptime Guarantee
             </div>
           </div>
 
           {/* < 3mins Average Response Time */}
           <div className="text-center flex-1">
-            <div className="text-4xl font-bold bg-[#553286] bg-clip-text text-transparent mb-2 leading-none">
-              &lt; 3mins
+            <div className="text-4xl font-bold bg-[#553286] bg-clip-text text-transparent mb-2 leading-none font-poppins">
+              &lt; 2mins
             </div>
-            <div className="text-gray-300 text-sm font-medium leading-tight">
+            <div className="text-gray-300 text-sm font-medium leading-tight font-poppins">
               Average Response Time
             </div>
           </div>
 
           {/* 85% Efficiency Improvement */}
           <div className="text-center flex-1">
-            <div className="text-4xl font-bold bg-[#823286] bg-clip-text text-transparent mb-2 leading-none">
+            <div className="text-4xl font-bold bg-[#823286] bg-clip-text text-transparent mb-2 leading-none font-poppins">
               85%
             </div>
-            <div className="text-gray-300 text-sm font-medium leading-tight">
+            <div className="text-gray-300 text-sm font-medium leading-tight font-poppins">
               Efficiency Improvement
             </div>
           </div>

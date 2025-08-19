@@ -46,13 +46,13 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center sm:mb-12">
-          <h2 className="text-2xl font-bold text-[#FFFFFFcc] font-space sm:text-3xl md:text-4xl">
+          <h2 className="text-2xl font-bold text-[#FFFFFFcc] font-space sm:text-3xl md:text-4xl font-poppins">
             Frequently Asked Questions
           </h2>
         </div>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:gap-6 font-poppins">
           {faqs.map((faq) => (
             <div
               key={faq.id}
@@ -94,7 +94,7 @@ const FAQ = () => {
               {/* Answer - Positioned absolutely to prevent layout shift */}
               <div
                 id={`faq-answer-${faq.id}`}
-                className={`absolute left-0 right-0 z-10 bg-white rounded-b-lg shadow-md border-t border-gray-100 transition-all duration-300 ease-in-out ${
+                className={`absolute left-0 right-0 z-10 bg-white rounded-b-lg shadow-md border-t border-gray-100 transition-all duration-300 ease-in-out font-poppins ${
                   openFAQ === faq.id
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-2 pointer-events-none'

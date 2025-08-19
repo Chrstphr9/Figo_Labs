@@ -83,7 +83,7 @@ const ClientTestimonials = () => {
 
   const getCardScale = (index: number): string => {
     const middleCardIndex = currentSlide;
-    return index === middleCardIndex ? 'scale-110' : 'scale-95';
+    return index === middleCardIndex ? 'scale-110' : 'scale-85';
   };
 
   const getCardOpacity = (index: number): string => {
@@ -93,33 +93,17 @@ const ClientTestimonials = () => {
 
   const getCardBorderRadius = (index: number): string => {
     const middleCardIndex = currentSlide;
-    return index === middleCardIndex ? 'rounded-3xl' : 'rounded-3xl';
+    return index === middleCardIndex ? 'rounded-3xl' : 'rounded-xl';
   };
 
   return (
-    <section className="w-full px-4 py-16 bg-[#0B0B0B] text-white overflow-hidden">
+    <section className="w-full px-4 py-16 bg-[#05040A] text-white overflow-hidden">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-3xl font-bold mb-16 text-white">
+        <h2 className="text-center text-[36px] font-bold mb-16 text-white font-poppins">
           Client Testimonials
         </h2>
 
         <div className="relative flex justify-center items-center">
-          <button
-            onClick={prevSlide}
-            disabled={isTransitioning}
-            className="absolute left-4 z-20 flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            disabled={isTransitioning}
-            className="absolute right-4 z-20 flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </button>
-
           <div className="flex justify-center w-full">
             <div className="overflow-hidden" style={{ width: '1140px' }}>
               <div 
@@ -196,7 +180,24 @@ const ClientTestimonials = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-6 space-x-234">
+          <button
+            onClick={prevSlide}
+            disabled={isTransitioning}
+            className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+          <button
+            onClick={nextSlide}
+            disabled={isTransitioning}
+            className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+        </div>
+
+        {/* <div className="flex justify-center mt-8 space-x-2">
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -213,7 +214,7 @@ const ClientTestimonials = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

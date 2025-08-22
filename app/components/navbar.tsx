@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { X, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { assets } from '@/assets/assets'
 
@@ -18,7 +18,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="flex items-center">
-              <Image src={assets.Logo1} alt='' />
+              <Image src={assets.Logo1} alt='logo' className="w-[182px] h-[46px] md:w-[218px] md:h-[55.13px]"/>
             </div>
           </div>
 
@@ -61,7 +61,11 @@ export default function Navbar() {
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Image src={assets.menu} alt="menu" className="w-[24px] h-[24px]" />
+              )}
             </button>
           </div>
         </div>

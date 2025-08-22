@@ -1,5 +1,3 @@
-import React from 'react';
-import { Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import { assets } from '@/assets/assets';
 
@@ -11,14 +9,14 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-6">
-                            <Image src={assets.Logo1} alt='' />
+                            <Image src={assets.Logo1} alt='' className='w-[182px] h-[46px] md:w-[218px] md:h-[55.13px]'/>
                         </div>
 
                         <div className="mb-6">
-                            <h3 className="text-sm font-semibold text-gray-300 mb-2 font-poppins">
+                            <h3 className="text-sm font-semibold text-white mb-2 font-poppins">
                                 YOUR TRUSTED EMAIL MANAGEMENT SOLUTION.
                             </h3>
-                            <p className="text-sm text-gray-400 leading-relaxed font-poppins">
+                            <p className="text-medium text-white leading-relaxed font-poppins">
                                 Designed to help users seamlessly organize, prioritize, and act on emails efficiently.
                             </p>
                         </div>
@@ -49,7 +47,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-medium"
                                 >
                                     Figocard
                                 </a>
@@ -57,7 +55,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     FigoEvents
                                 </a>
@@ -65,7 +63,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     FigoAI
                                 </a>
@@ -73,7 +71,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     BillsClan
                                 </a>
@@ -100,7 +98,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-poppins"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm font-poppins"
                                 >
                                     About Us
                                 </a>
@@ -108,7 +106,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-poppins"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm font-poppins"
                                 >
                                     Become a Partner
                                 </a>

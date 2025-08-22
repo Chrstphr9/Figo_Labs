@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
@@ -14,6 +14,10 @@ interface Testimonial {
 const ClientTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [slideWidth, setSlideWidth] = useState(380);
+  const [isMobile, setIsMobile] = useState(false);
+  const touchStartXRef = useRef<number | null>(null);
+  const touchDeltaXRef = useRef(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -76,9 +80,54 @@ const ClientTestimonials = () => {
   }, [currentSlide, isTransitioning, testimonials.length]);
 
   const getTransform = () => {
-    const slideWidth = 380;
     const offset = currentSlide * slideWidth;
     return `translateX(-${offset}px)`;
+  };
+
+  // Responsive: compute slide width for mobile and track viewport for breakpoints
+  useEffect(() => {
+    const compute = () => {
+      const width = typeof window !== 'undefined' ? window.innerWidth : 1200;
+      const mobile = width < 768;
+      setIsMobile(mobile);
+      if (mobile) {
+        const horizontalPadding = 32; // approx px padding on the section
+        const maxCard = 380;
+        const minCard = 260;
+        const computed = Math.max(minCard, Math.min(maxCard, width - horizontalPadding));
+        setSlideWidth(Math.round(computed));
+      } else {
+        setSlideWidth(380);
+      }
+    };
+    compute();
+    window.addEventListener('resize', compute);
+    return () => window.removeEventListener('resize', compute);
+  }, []);
+
+  // Touch swipe handlers (mobile)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+    touchDeltaXRef.current = 0;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null) return;
+    const currentX = e.touches[0].clientX;
+    touchDeltaXRef.current = currentX - touchStartXRef.current;
+  };
+
+  const handleTouchEnd = () => {
+    const threshold = 50; // px
+    const dx = touchDeltaXRef.current;
+    touchStartXRef.current = null;
+    touchDeltaXRef.current = 0;
+    if (Math.abs(dx) < threshold || isTransitioning) return;
+    if (dx < 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
   };
 
   const getCardScale = (index: number): string => {
@@ -105,20 +154,26 @@ const ClientTestimonials = () => {
 
         <div className="relative flex justify-center items-center">
           <div className="flex justify-center w-full">
-            <div className="overflow-hidden" style={{ width: '1140px' }}>
+            <div 
+              className="overflow-hidden w-full md:w-[1140px]"
+              style={{ width: isMobile ? `${slideWidth}px` : '1140px' }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div 
                 className={`flex items-center ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
                 style={{
                   transform: getTransform(),
-                  width: `${extendedTestimonials.length * 380}px`,
-                  paddingLeft: '380px'
+                  width: `${extendedTestimonials.length * slideWidth}px`,
+                  paddingLeft: `${slideWidth}px`
                 }}
               >
                 {extendedTestimonials.map((testimonial, index) => (
                   <div
                     key={`${testimonial.id}-${index}`}
                     className={`flex-shrink-0 px-4 transition-all duration-300 ${getCardScale(index)} ${getCardOpacity(index)}`}
-                    style={{ width: '380px' }}
+                    style={{ width: `${slideWidth}px` }}
                   >
                     <div className={`bg-[#BFAEFF1A] ${getCardBorderRadius(index)} p-6 h-full flex flex-col`} style={{ minHeight: '400px' }}>
                       <div className="text-purple-500 text-6xl font-bold leading-none mb-4" style={{ fontFamily: 'serif' }}></div>
@@ -180,18 +235,18 @@ const ClientTestimonials = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-6 space-x-234">
+        <div className="flex justify-center mt-6 gap-60 md:gap-262">
           <button
             onClick={prevSlide}
             disabled={isTransitioning}
-            className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#05040A] border hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={nextSlide}
             disabled={isTransitioning}
-            className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#05040A] border hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>

@@ -43,7 +43,7 @@ const FAQ = () => {
 
     return (
         <section id='faq' className="w-full bg-[#07050D] py-12 px-4 sm:py-16 md:py-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center sm:mb-12">
           <h2 className="text-2xl font-bold text-[#FFFFFFcc] font-space sm:text-3xl md:text-4xl font-poppins">
@@ -56,18 +56,20 @@ const FAQ = () => {
           {faqs.map((faq) => (
             <div
               key={faq.id}
-              className={`relative bg-[#181522CC] rounded-lg shadow-sm hover:shadow-md transition-shadow min-h-[80px] ${
+              className={`relative rounded-lg shadow-sm hover:shadow-md transition-shadow min-h-[80px] lg:min-h-[96px] ${
                 openFAQ === faq.id ? 'mb-32 lg:mb-0' : 'mb-0'
               }`}
             >
               <button
                 onClick={() => toggleFAQ(faq.id)}
-                className="w-full p-4 text-left rounded-lg sm:p-6"
+                className={`w-full p-4 text-left rounded-lg sm:p-6 lg:p-5 transition-colors h-full ${
+                  openFAQ === faq.id ? 'bg-[#8A38F5]' : 'bg-[#181522CC]'
+                }`}
                 aria-expanded={openFAQ === faq.id}
                 aria-controls={`faq-answer-${faq.id}`}
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="pr-4 text-sm font-medium text-white font-space sm:text-base">
+                <div className="flex items-start justify-between min-w-0">
+                  <h3 className="pr-4 text-sm font-medium text-white font-space sm:text-base flex-1 min-w-0 whitespace-normal break-words">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0 ml-2">
@@ -94,7 +96,7 @@ const FAQ = () => {
               {/* Answer - Positioned absolutely to prevent layout shift */}
               <div
                 id={`faq-answer-${faq.id}`}
-                className={`absolute left-0 right-0 z-10 bg-white rounded-b-lg shadow-md border-t border-gray-100 transition-all duration-300 ease-in-out font-poppins ${
+                className={`absolute left-0 right-0 z-10 bg-[#181522] rounded-b-lg shadow-md border-t border-gray-100 transition-all duration-300 ease-in-out font-poppins ${
                   openFAQ === faq.id
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-2 pointer-events-none'

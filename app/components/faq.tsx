@@ -8,32 +8,32 @@ const FAQ = () => {
         {
             id: 1,
             question: "What challenges does MailPilot address in email management?",
-            answer: "."
+            answer: "MailPilot tackles slow first-response times, email backlogs, missed follow-ups, limited mailbox workload visibility, and inconsistent routing/replies. These challenges lead to SLA breaches, customer dissatisfaction, higher costs, and inefficient staffing."
         },
         {
             id: 2,
             question: "How does MailPilot improve operational efficiency?",
-            answer: ""
+            answer: "By integrating intelligent email monitoring, contextual AI responses, SLA tracking, and advanced analytics, MailPilot automates triage and first-level replies, enforces SLA compliance, and provides real-time dashboards for better decision-making."
         },
         {
             id: 3,
             question: "What are the core features of MailPilot’s Intelligent Email Monitoring?",
-            answer: "."
+            answer: "It offers multi-mailbox integration, smart categorization of emails by urgency, type, sentiment, and required action, and spam filtering to reduce irrelevant communications before they reach human agents."
         },
         {
             id: 4,
             question: "How does the Contextual AI Response Engine work?",
-            answer: ""
+            answer: "Using Natural Language Processing (NLP) and integration with company policies, FAQs, APIs, and historical data, the engine understands email context and intent, crafts brand-consistent replies, and maintains a uniform tone across communications ."
         },
         {
             id: 5,
             question: "What analytics capabilities does MailPilot provide?",
-            answer: "."
+            answer: "The advanced dashboard delivers real-time metrics on email volume, response rates, SLA performance, and team productivity. It also uses predictive analytics to forecast email volumes and resource needs ."
         },
         {
             id: 6,
             question: "What measurable benefits can organizations expect from MailPilot?",
-            answer: ""
+            answer: "Organizations using MailPilot have reported up to 65% improvement in operational efficiency, 90% better SLA compliance, and 90% reduction in first-response delays. These gains translate into lower operational costs, improved customer satisfaction, and a stronger competitive edge"
         }
     ];
 

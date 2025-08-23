@@ -70,7 +70,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
             )}
 
             {/* Main Content */}
-            <div className="flex-1 flex flex-col items-center justify-center">
+            <div className="flex-1 flex flex-col items-center justify-center -mt-20  lg:mt-15">
                 <div className="max-w-5xl mx-auto text-center">
                     {/* Beta Badge */}
                     <div className="
@@ -186,7 +186,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                     {/* Arc border container */}
                     <div className="w-[520px] h-[140px] relative overflow-hidden">
                         {/* The actual arc border */}
-                        <div className="absolute top-13 left-1/2 transform -translate-x-1/2 w-[520px] h-[820px]">
+                        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-[600px] h-[820px]">
                             <Image src={assets.curve} alt='curve' />
                         </div>
                     </div>
@@ -194,39 +194,41 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
             </div>
 
             {/* Mobile Statistics Section */}
-            <div className="md:hidden mt-12 mb-8">
-                <div className="flex justify-between items-center px-8 max-w-sm mx-auto">
-                    {/* 99.9% Uptime Guarantee */}
-                    <div className="text-center flex-1">
-                        <div className="text-2xl font-bold bg-[#BF38F575] bg-clip-text text-transparent mb-1 leading-none font-poppins">
-                            99.9%
-                        </div>
-                        <div className="text-gray-300 text-xs font-medium leading-tight font-poppins">
-                            Uptime SLA
-                        </div>
-                    </div>
-
-                    {/* < 2mins Average Response Time */}
-                    <div className="text-center flex-1">
-                        <div className="text-2xl font-bold bg-[#553286] bg-clip-text text-transparent mb-1 leading-none font-poppins">
-                            &lt; 2mins
-                        </div>
-                        <div className="text-gray-300 text-xs font-medium leading-tight font-poppins">
-                            Average Response Time
-                        </div>
-                    </div>
-
-                    {/* 85% Efficiency Improvement */}
-                    <div className="text-center flex-1">
-                        <div className="text-2xl font-bold bg-[#823286] bg-clip-text text-transparent mb-1 leading-none font-poppins">
-                            85%
-                        </div>
-                        <div className="text-gray-300 text-xs font-medium leading-tight font-poppins">
-                            Efficiency Improvement
-                        </div>
-                    </div>
+            <div className="md:hidden mb-18">
+    <div className="w-full px-4 sm:px-6">
+        <div className="flex justify-between items-center w-full max-w-full gap-2 sm:gap-4">
+            {/* 99.9% Uptime Guarantee */}
+            <div className="text-center flex-1 min-w-0">
+                <div className="text-xl sm:text-2xl font-bold bg-[#BF38F575] bg-clip-text text-transparent mb-1 leading-none font-poppins">
+                    95%
+                </div>
+                <div className="text-gray-300 text-[10px] sm:text-xs font-medium leading-tight font-poppins">
+                    Uptime SLA
                 </div>
             </div>
+
+            {/* < 2mins Average Response Time */}
+            <div className="text-center flex-1 min-w-0">
+                <div className="text-xl sm:text-2xl font-bold bg-[#553286] bg-clip-text text-transparent mb-1 leading-none font-poppins">
+                    &lt; 2mins
+                </div>
+                <div className="text-gray-300 text-[10px] sm:text-xs font-medium leading-tight font-poppins text-center">
+                    Average Response Time
+                </div>
+            </div>
+
+            {/* 85% Efficiency Improvement */}
+            <div className="text-center flex-1 min-w-0">
+                <div className="text-xl sm:text-2xl font-bold bg-[#823286] bg-clip-text text-transparent mb-1 leading-none font-poppins">
+                    85%
+                </div>
+                <div className="text-gray-300 text-[10px] sm:text-xs font-medium leading-tight font-poppins text-center">
+                    Efficiency Improvement
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
             {/* Animated gradient background */}
             <div className="absolute inset-0 -z-10 overflow-hidden">

@@ -93,7 +93,7 @@ const ClientTestimonials = () => {
       if (mobile) {
         const horizontalPadding = 32; // approx px padding on the section
         const maxCard = 380;
-        const minCard = 260;
+        const minCard = 280;
         const computed = Math.max(minCard, Math.min(maxCard, width - horizontalPadding));
         setSlideWidth(Math.round(computed));
       } else {
@@ -146,16 +146,16 @@ const ClientTestimonials = () => {
   };
 
   return (
-    <section className="w-full px-4 py-16 bg-[#05040A] text-white overflow-hidden">
-      <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-[36px] font-bold mb-16 text-white font-poppins">
+    <section className="w-full px-4 py-12 sm:py-16 bg-[#05040A] text-white overflow-hidden">
+      <div className="w-full mx-auto max-w-7xl">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-[36px] font-bold mb-12 sm:mb-16 text-white font-poppins px-4 sm:px-0">
           Client Testimonials
         </h2>
 
         <div className="relative flex justify-center items-center">
           <div className="flex justify-center w-full">
             <div 
-              className="overflow-hidden w-full md:w-[1140px]"
+              className="overflow-hidden w-full md:w-[1140px] px-4 sm:px-0"
               style={{ width: isMobile ? `${slideWidth}px` : '1140px' }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
@@ -172,18 +172,18 @@ const ClientTestimonials = () => {
                 {extendedTestimonials.map((testimonial, index) => (
                   <div
                     key={`${testimonial.id}-${index}`}
-                    className={`flex-shrink-0 px-4 transition-all duration-300 ${getCardScale(index)} ${getCardOpacity(index)}`}
+                    className={`flex-shrink-0 px-2 sm:px-4 transition-all duration-300 ${getCardScale(index)} ${getCardOpacity(index)}`}
                     style={{ width: `${slideWidth}px` }}
                   >
-                    <div className={`bg-[#BFAEFF1A] ${getCardBorderRadius(index)} p-6 h-full flex flex-col`} style={{ minHeight: '400px' }}>
+                    <div className={`bg-[#BFAEFF1A] ${getCardBorderRadius(index)} p-4 sm:p-6 h-full flex flex-col`} style={{ minHeight: '400px' }}>
                       <div className="text-purple-500 text-6xl font-bold leading-none mb-4" style={{ fontFamily: 'serif' }}></div>
                       <div className="flex-grow mb-6">
-                        <p className="text-gray-300 text-base leading-relaxed font-light">
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
                           {testimonial.quote}
                         </p>
                       </div>
                       <div className="flex items-center bg-[#FBFBFB80] rounded-full py-2 px-2 w-fit">
-  <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0 overflow-hidden">
+  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0 overflow-hidden">
     {testimonial.avatar ? (
       <Image 
         src={testimonial.avatar}
@@ -198,23 +198,27 @@ const ClientTestimonials = () => {
         }}
       />
     ) : (
-      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-        <span className="text-white font-semibold text-sm">
+      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+        <span className="text-white font-semibold text-xs sm:text-sm">
           {testimonial.name.charAt(0)}
         </span>
       </div>
     )}
   </div>
   <div 
-    className="pr-8"
+    className="pr-4 sm:pr-8"
     style={{
-      width: '227.69px',
-      height: '45.87px',
+      width: 'auto',
+      minWidth: '120px',
+      maxWidth: '227.69px',
+      height: 'auto',
+      minHeight: '35px',
+      maxHeight: '45.87px',
       opacity: 1,
-      gap: '12.65px',
+      gap: '8px',
       borderRadius: '18.98px',
       paddingTop: '3.16px',
-      paddingRight: '107.56px',
+      paddingRight: '20px',
       paddingBottom: '3.16px',
       paddingLeft: '3.16px'
     }}
@@ -222,7 +226,7 @@ const ClientTestimonials = () => {
     <div className="text-[#111111E5] font-semibold text-xs">
       {testimonial.name}
     </div>
-    <div className="text-[#111111E5] text-sm font-semibold whitespace-nowrap">
+    <div className="text-[#111111E5] text-xs sm:text-sm font-semibold whitespace-nowrap">
       {testimonial.company}
     </div>
   </div>
@@ -235,20 +239,20 @@ const ClientTestimonials = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-6 gap-60 md:gap-262">
+        <div className="flex justify-center mt-6 gap-20 sm:gap-40 md:gap-60">
           <button
             onClick={prevSlide}
             disabled={isTransitioning}
             className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#05040A] border hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </button>
           <button
             onClick={nextSlide}
             disabled={isTransitioning}
             className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#05040A] border hover:bg-gray-700 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </button>
         </div>
 

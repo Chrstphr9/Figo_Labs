@@ -5,7 +5,7 @@ import { features } from '@/assets/assets'
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="w-full max-w-[534px] h-[214px] bg-[#05040A] border border-gray-700 rounded-xl p-6 flex flex-col gap-6 hover:border-gray-600 transition-all duration-300 backdrop-blur-sm">
+    <div className="w-full max-w-[534px] h-auto min-h-[214px] bg-[#05040A] border border-gray-700 rounded-xl p-4 sm:p-6 flex flex-col gap-4 sm:gap-6 hover:border-gray-600 transition-all duration-300 backdrop-blur-sm">
       <div className="flex flex-col items-center gap-3">
         <div className="text-gray-300 flex justify-center">
           <Image 
@@ -16,11 +16,11 @@ const FeatureCard = ({ icon, title, description }) => {
             className="object-contain"
           />
         </div>
-        <h3 className="text-[#ffffffe6] font-poppins text-[20px] font-semibold leading-tight text-center">
+        <h3 className="text-[#ffffffe6] font-poppins text-lg sm:text-[20px] font-semibold leading-tight text-center px-2">
           {title}
         </h3>
       </div>
-      <p className="text-gray-400 text-sm leading-relaxed flex-1 text-center font-poppins">
+      <p className="text-gray-400 text-sm leading-relaxed flex-1 text-center font-poppins px-2">
         {description}
       </p>
     </div>
@@ -52,24 +52,24 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-[#05040A] text-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#05040A] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-[40px] mb-4 font-semibold font-poppins">
+        <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] mb-4 font-semibold font-poppins">
             Powerful Features
           </h2>
           <p className="gradient-text text-lg sm:text-xl font-semibold mb-4 lg:text-[40px] font-poppins">
             for Modern Teams
           </p>
-          <p className="text-[#ffffffb3] text-base sm:text-lg max-w-3xl mx-auto leading-relaxed lg:font-normal font-poppins">
+          <p className="text-[#ffffffb3] text-base sm:text-lg max-w-3xl mx-auto leading-relaxed lg:font-normal font-poppins px-2 sm:px-0">
             Experience the future of email management with our comprehensive AI solution, 
             designed to streamline operations and enhance customer experiences.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto font-poppins">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto font-poppins px-4 sm:px-0">
           {features.map((feature, index) => (
             <div key={index} className="flex justify-center">
               <FeatureCard

@@ -13,12 +13,12 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#05040A] text-white font-['Inter'] sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="flex items-center">
-              <Image src={assets.Logo1} alt='logo' className="w-[182px] h-[46px] md:w-[218px] md:h-[55.13px]"/>
+              <Image src={assets.Logo1} alt='logo' className="w-[140px] h-[35px] sm:w-[182px] sm:h-[46px] md:w-[218px] md:h-[55.13px]"/>
             </div>
           </div>
 
@@ -77,16 +77,6 @@ export default function Navbar() {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-700 mt-2">
-            {/* Mobile Zapable attribution */}
-            <div className="flex items-center justify-center mb-4 sm:hidden">
-              <span className="text-xs text-gray-400 mr-1">BY</span>
-              <div className="flex items-center space-x-1">
-                <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-xs text-gray-900">⚡</span>
-                </div>
-                <span className="text-sm font-medium">Zapable</span>
-              </div>
-            </div>
             
             <a
               href="#"

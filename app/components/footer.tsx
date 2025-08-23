@@ -46,7 +46,8 @@ const Footer = () => {
                         <ul className="space-y-3 mb-8 font-poppins">
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                                    href="https://figocard.com"
                                     className="text-white hover:text-white transition-colors duration-200 text-medium"
                                 >
                                     Figocard
@@ -54,7 +55,8 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                                    href="https://figoevents.com"
                                     className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     FigoEvents
@@ -62,7 +64,8 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                                    href="https://billsclan.com"
                                     className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     FigoAI
@@ -70,7 +73,8 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                                    href="https://billsclan.com"
                                     className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     BillsClan
@@ -120,18 +124,21 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                                    href="https://www.figolabs.ai/terms-policy"
                                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                                 >
-                                    Help Center
+                                    Term and Condition
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                target='_blank'
+                            
+                                    href="https://www.figolabs.ai/privacy-policy"
                                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                                 >
-                                    Terms and Conditions
+                                    Privacy Policy
                                 </a>
                             </li>
                         </ul>

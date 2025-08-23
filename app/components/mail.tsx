@@ -45,7 +45,7 @@ const CustomerEaseSection: React.FC = () => {
         <div className="lg:hidden relative h-[900px] flex items-center justify-center overflow-hidden">
           
           {/* Large Dark Purple Circle - positioned to extend beyond screen */}
-          <div className="absolute -right-20 top-3 w-[460px] h-[460px] sm:w-[560px] sm:h-[560px]">
+          <div className="absolute top-3 w-[460px] h-[460px] sm:w-[560px] sm:h-[560px]">
             <Image src={assets.semi} alt='' />
           </div>
           

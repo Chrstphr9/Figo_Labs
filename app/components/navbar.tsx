@@ -37,10 +37,10 @@ export default function Navbar() {
               Features
             </a>
             <a 
-              href="#" 
+              href="#faq" 
               className="text-gray-300 hover:text-white transition-colors duration-200 font-normal text-[16px] font-inter"
             >
-              Resources
+              FAQs
             </a>
           </div>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
               href="#faq"
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
             >
-              Resources
+              FAQs
             </a>
             
             <div className="pt-4 space-y-2">

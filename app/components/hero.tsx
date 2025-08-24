@@ -122,12 +122,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-row sm:flex-row gap-3 sm:gap-4 justify-center items-center text-shadow-glow px-4 sm:px-0">
-                        <button className="w-full sm:w-auto max-w-[130px] sm:max-w-none gradient-btn hover:from-purple-700 hover:to-blue-700 text-white font-normal px-6 sm:px-4 py-3 sm:py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-glow hover:shadow-glow-hover text-[16px] border border-[#ffffff66] whitespace-nowrap">
+                       <a href="https://mailpilot.figolabs.ai/sign-up"
+                       target='_blank'>
+                       <button className="w-full sm:w-auto max-w-[130px] sm:max-w-none gradient-btn hover:from-purple-700 hover:to-blue-700 text-white font-normal px-6 sm:px-4 py-3 sm:py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-glow hover:shadow-glow-hover text-[16px] border border-[#ffffff66] whitespace-nowrap">
                             Get Started
                         </button>
+                       </a>
+                        <a href="https://www.figolabs.ai/contact"
+                        target='_blank'>
                         <button className="w-full sm:w-auto max-w-[130px] sm:max-w-none border-1 border-[#ffffff66] hover:border-gray-500 text-gray-300 hover:text-white font-normal px-6 sm:px-4 py-3 sm:py-2 rounded-lg transition-all duration-200 shadow-glow hover:bg-gray-800/50 backdrop-blur-sm text-[16px] whitespace-nowrap">
                             Talk to Sales
                         </button>
+                        </a>
                     </div>
                 </div>
             </div>

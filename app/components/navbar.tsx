@@ -92,7 +92,7 @@ export default function Navbar() {
               Product
             </a>
             <a
-              href="#feature"
+              href="#features"
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
             >
               Features

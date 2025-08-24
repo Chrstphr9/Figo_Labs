@@ -52,7 +52,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-[#05040A] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section id='features' className="bg-[#05040A] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">

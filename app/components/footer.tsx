@@ -24,13 +24,13 @@ const Footer = () => {
                         <div className="mt-16">
                             <h4 className="text-sm font-semibold text-white mb-3 font-poppins">Follow Us On:</h4>
                             <div className="flex justify-center space-x-4 md:justify-start">
-                                <a href="https://instagram.com/figoevents.app" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
+                                <a href="https://instagram.com/figoailabs" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
                                     <Image src={assets.instagram} alt="logo" />
                                 </a>
-                                <a href="https://twitter.com/figoevents.app" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
+                                <a href="https://x.com/figoailabs" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
                                     <Image src={assets.x} alt="logo" />
                                 </a>
-                                <a href="https://linkedin.com/figoevents.app" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
+                                <a href="https://www.linkedin.com/company/figoailabs" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">
                                     <Image src={assets.linkedin} alt="logo" />
                                 </a>
                                 <a href="https://youtube.com/figoevents.app" target='_blank' className="flex items-center justify-center w-8 h-8 transition-colors rounded hover:bg-gray-600">

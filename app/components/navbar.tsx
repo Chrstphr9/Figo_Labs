@@ -31,7 +31,7 @@ export default function Navbar() {
               Product
             </a>
             <a 
-              href="#" 
+              href="#features" 
               className="text-gray-300 hover:text-white transition-colors duration-200 font-normal text-[16px] font-inter"
             >
               Features
@@ -46,13 +46,20 @@ export default function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <a href="https://mailpilot.figolabs.ai/sign-in"
+            target='_blank'>
             <button className="text-white hover:text-white transition-colors duration-200 font-normal font-inter text-[16px] px-4 py-2">
               Login
             </button>
+            </a>
+            <a href="https://mailpilot.figolabs.ai/sign-up"
+            target='_blank'
+            >
             <button className="bg-[#05040A] border-[0.5px] border-[#ffffff66] text-white px-6 py-2 rounded-[12px] font-normal text-[16px] transition-all duration-200 flex items-center space-x-2 group">
               <span>Start Now</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -79,32 +86,38 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-700 mt-2">
             
             <a
-              href="#"
+              href="#product"
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
             >
               Product
             </a>
             <a
-              href="#"
+              href="#feature"
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
             >
               Features
             </a>
             <a
-              href="#"
+              href="#faq"
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
             >
               Resources
             </a>
             
             <div className="pt-4 space-y-2">
+              <a href="https://mailpilot.figolabs.ai/sign-in"
+              target='_blank'>
               <button className="w-full text-left text-gray-300 hover:text-white px-3 py-2 text-base font-medium transition-colors duration-200">
                 Login
               </button>
+              </a>
+              <a href="https://mailpilot.figolabs.ai/sign-up"
+              target='_blank'>
               <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-center space-x-2 group">
                 <span>Start Now</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
+              </a>
             </div>
           </div>
         </div>

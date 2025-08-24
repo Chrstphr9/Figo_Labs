@@ -24,7 +24,7 @@
 
 @layer utilities {
   .shadow-glow {
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 1px 10px rgba(255, 255, 255, 0.4);
   }
   .shadow-glow-hover:hover {
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);

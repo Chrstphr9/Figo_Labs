@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
     }, []);
 
     return (
-        <section className={`bg-[#05040A] text-white min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 relative ${className}`}>
+        <section id='product' className={`bg-[#05040A] text-white min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 relative ${className}`}>
             {/* Mobile Header */}
             <div className="md:hidden flex justify-between items-center py-4 px-4 relative z-50">
                 <div className="flex items-center">
@@ -61,10 +61,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                     
                     {/* Menu Items */}
                     <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-xl">
-                        <a href="#" className="text-white hover:text-purple-400 transition-colors">Home</a>
-                        <a href="#" className="text-white hover:text-purple-400 transition-colors">Features</a>
-                        <a href="#" className="text-white hover:text-purple-400 transition-colors">Pricing</a>
-                        <a href="#" className="text-white hover:text-purple-400 transition-colors">Contact</a>
+                        <a href="#" className="text-white hover:text-purple-400 transition-colors">Productt</a>
+                        <a href="#feature" className="text-white hover:text-purple-400 transition-colors">Features</a>
+                        <a href="#faq" className="text-white hover:text-purple-400 transition-colors">Resources</a>
+
                     </div>
                 </div>
             )}
@@ -90,7 +90,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                         <span className="
                             uppercase 
                             font-medium 
-                            text-gray-300 
+                            text-[#FFFFFF]
                             text-xs
                             font-poppins
                         ">

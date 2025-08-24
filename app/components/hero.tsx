@@ -94,7 +94,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                             text-xs
                             font-poppins
                         ">
-                            By Figo Labs
+                            By Figo AI Labs
                         </span>
                     </div>
 

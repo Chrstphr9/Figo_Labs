@@ -9,6 +9,11 @@
   --font-manrope: 'Manrope', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .gradient-text {
     background: linear-gradient(to right, #9747FF, #450744);
   -webkit-background-clip: text;

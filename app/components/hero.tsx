@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
     }, []);
 
     return (
-        <section id='product' className={`bg-[#05040A] text-white min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 relative ${className}`}>
+        <section id='product' className={`bg-[#05040A] text-white min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 relative overflow-x-hidden ${className}`}>
             {/* Mobile Header */}
             <div className="md:hidden flex justify-between items-center py-4 px-4 relative z-50">
                 <div className="flex items-center">
@@ -187,12 +187,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
             </div>
 
             {/* Mobile Arc above Statistics */}
-            <div className="md:hidden flex w-full justify-center mt-10 -mb-6">
+            <div className="md:hidden flex w-full justify-center mt-10 -mb-6 px-4">
                 <div className="relative">
                     {/* Arc border container */}
                     <div className="w-[520px] h-[140px] relative overflow-hidden">
                         {/* The actual arc border */}
-                        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-[600px] h-[820px]">
+                        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full max-w-[485px] h-[820px]">
                             <Image src={assets.curve} alt='curve' />
                         </div>
                     </div>

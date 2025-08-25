@@ -126,7 +126,7 @@ const Footer = () => {
                                 <a
                                 target='_blank'
                                     href="https://www.figolabs.ai/terms-policy"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     Term and Condition
                                 </a>
@@ -136,7 +136,7 @@ const Footer = () => {
                                 target='_blank'
                             
                                     href="https://www.figolabs.ai/privacy-policy"
-                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                                    className="text-white hover:text-white transition-colors duration-200 text-sm"
                                 >
                                     Privacy Policy
                                 </a>

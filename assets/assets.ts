@@ -8,6 +8,7 @@ import instagram from './instagram.png'
 import curve from './curve.svg'
 import menu from './menu.png'
 import semi from './semi.png'
+import mails from './mails.gif'
 
 export const assets = {
     Logo1,
@@ -19,5 +20,6 @@ export const assets = {
     linkedin,
     curve,
     menu,
-    semi
+    semi,
+    mails
 } 

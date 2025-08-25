@@ -35,13 +35,22 @@ const CustomerEaseSection: React.FC = () => {
           
           {/* Right Side - Email Visualization */}
           <div className="relative w-full h-[600px] flex justify-center lg:justify-end">
-            <div className="relative w-[600px] h-full">
-              {/* Background Circles */}
-              <div className="absolute inset-0 ">
-                <Image src={assets.Circles} alt='circle' />
-              </div>
-            </div>
-          </div>
+  <div className="relative w-[600px] h-full">
+    {/* GIF positioned above circles */}
+    <div className="absolute inset-0 z-10 hidden lg:block">
+      <Image 
+        src={assets.mails} 
+        alt='animated gif' 
+        className="w-[438px] h-[533px] object-contain ml-18" // or object-cover depending on your needs
+      />
+    </div>
+    
+    {/* Background Circles */}
+    <div className="absolute inset-0 z-0 w-[646px] h-[638]">
+      <Image src={assets.Circles} alt='circle' />
+    </div>
+  </div>
+</div>
           
         </div>
         
